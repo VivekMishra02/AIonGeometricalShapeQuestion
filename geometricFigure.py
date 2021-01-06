@@ -47,6 +47,6 @@ def ImageProcessing(figure, text):
     cv2.destroyAllWindows()
 
 
-sentence = "A  equilateral triangle with base = 5 cm height = 20 30 find it's area?"
+sentence = "A equilateral triangle with side 30 cm . Find it's area?"
 
 ParseText(sentence)
