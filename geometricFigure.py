@@ -1,15 +1,17 @@
 import numpy as np
 import cv2
+import re
 
 from GeometryFigure.Triangle import Triangle
 from GeometryFigure.circle import Circle
+from GeometryFigure.rectangle import Rectangle
 
 # Drawing Shapes
 
-from GeometryFigure.rectangle import Rectangle
-
-
 def ParseText(text):
+    #removing punctuation and wild charecter except space
+    for word in text.split("\n"):
+        text = " ".join(re.findall(r"[a-zA-Z0-9]+", word))
     shapes = ["circle", "line", "ellipse", "rectangle", "square", "triangle"]
     text_list = text.split()
     for shape in shapes:
@@ -47,6 +49,6 @@ def ImageProcessing(figure, text):
     cv2.destroyAllWindows()
 
 
-sentence = "A equilateral triangle with side 30 cm . Find it's area?"
+sentence = "A triangle with height 30 and base 40 cm. find it's area?"
 
 ParseText(sentence)
