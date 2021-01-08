@@ -7,7 +7,7 @@ class Triangle:
         flag = 0
         unit = "units"
         type = ""
-        dimension = {}
+        dimension = {"height" : "", "base" : ""}
         text_list = text.split()
         units = ["mm","cm","km","miles","hm","Hm"]
 
@@ -129,7 +129,6 @@ class Triangle:
 
         # Drawing scalene triangle with it's dimension
         if flag == 0:
-
             p1 = (100, 200)
             p2 = (50, 70)
             p3 = (400, 100)
@@ -153,12 +152,12 @@ class Triangle:
 
     #function to calculate the  area
     def area(self,type, dimesnsion, sides):
-        area = 0
         if type == "equilateral":
-            return round(3**(1/2)*(sides[0]**2),3)
+            return round(3**(1/2)/4*(sides[0]**2),3)
+        if type == "" and (dimesnsion["height"] != "") and (dimesnsion["base"] != ""):
+            return round(1 / 2 * (int(dimesnsion["base"]) * int(dimesnsion["height"])), 3)
         if type == "" and len(sides) >= 3:
             s = (int(sides[0])+int(sides[1])+int(sides[2]))/2
-            area = (s*(s-sides[0])+s*(s-(sides[1]))+s*(s-sides[2]))**(1/2)
-            return round(area,3)
+            return round(s*(s-sides[0])*(s-(sides[1]))*(s-sides[2]))**(1/2)
         if type == "right":
             return round(1/2*(int(dimesnsion["base"])*int(dimesnsion["height"])),3)
