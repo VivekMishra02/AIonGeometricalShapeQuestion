@@ -39,7 +39,7 @@ class Triangle:
                 type = x
                 flag = 1
 
-        # Drawing right triangle with it's dimension
+        # Drawing right triangle with its dimension
         if type.lower() == "right":
             p1 = (100, 200)
             p2 = (100, 50)
@@ -61,7 +61,7 @@ class Triangle:
                 cv2.putText(image, "Some dimensions may be missing",
                             (p1[0], p1[1] + 50), cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 255))
 
-        # Drawing obtuse triangle with it's dimension
+        # Drawing obtuse triangle with its dimension
         elif type.lower() == "obtuse":
             p1 = (100, 200)
             p2 = (50, 50)
@@ -83,7 +83,7 @@ class Triangle:
                 cv2.putText(image, "Some dimensions may be missing",
                             (p1[0], p1[1] + 50), cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 255))
 
-        # Drawing acute triangle with it's dimension
+        # Drawing acute triangle with its dimension
         elif type.lower() == "acute":
             p1 = (100, 200)
             p2 = (150, 50)
@@ -105,7 +105,7 @@ class Triangle:
                 cv2.putText(image, "Some dimensions may be missing",
                             (p1[0], p1[1] + 50), cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 255))
 
-        # Drawing equilateral triangle with it's dimension
+        # Drawing equilateral triangle with its dimension
         elif type.lower() == "equilateral":
             p1 = (100, 200)
             p2 = (200, 50)
@@ -127,7 +127,7 @@ class Triangle:
                 cv2.putText(image, "Some dimensions may be missing",
                             (p1[0], p1[1] + 50), cv2.FONT_HERSHEY_SIMPLEX, .5, (255, 255, 255))
 
-        # Drawing scalene triangle with it's dimension
+        # Drawing scalene triangle with its dimension
         if flag == 0:
             p1 = (100, 200)
             p2 = (50, 70)
